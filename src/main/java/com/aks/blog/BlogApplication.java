@@ -2,7 +2,7 @@ package com.aks.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//lala
+
 @SpringBootApplication
 public class BlogApplication {
 
