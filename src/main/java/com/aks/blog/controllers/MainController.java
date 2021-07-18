@@ -16,9 +16,9 @@ public class MainController {
     }
 
     @PostMapping("/x+y")
-    public String summaXY(@RequestParam int X, @RequestParam int Y, Model model) {
+    public String summaXY(@RequestParam double X, @RequestParam double Y, Model model) {
         model.addAttribute("title", "Человек");
-        int result;
+        double result;
         if ((X % 1) == 0 && (0 <= X) && (X <= 255) && (Y % 1) == 0 && (0 <= Y) && (Y <= 255)) {
             result = X + Y;
             model.addAttribute("result", result);
