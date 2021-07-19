@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-    @GetMapping("/x+y")
+    @GetMapping("/sum")
     public String xy(Model model) {
         model.addAttribute("title", "Человек");
-        return "x+y";
+        return "sum";
     }
 
-    @PostMapping("/x+y")
+    @PostMapping("/sum")
     public String summaXY(@RequestParam double X, @RequestParam double Y, Model model) {
         model.addAttribute("title", "Человек");
         double result;
@@ -25,11 +25,11 @@ public class MainController {
             model.addAttribute("X", X);
             model.addAttribute("Y", Y);
         } else {
-            model.addAttribute("kosyak", "Этот калькулятор не позволяет складывать такие числа. Введите X и Y типа Integer (целочисленное значение) в диапазоне от 0 до 255");
+            model.addAttribute("error", "Этот калькулятор не позволяет складывать такие числа. Введите X и Y типа Integer (целочисленное значение) в диапазоне от 0 до 255");
             model.addAttribute("X", X);
             model.addAttribute("Y", Y);
 
         }
-        return "summa";
+        return "sumResult";
     }
 }
