@@ -2,7 +2,7 @@
 Description=SKrylov Service
 
 [Service]
-ExecStart=/usr/bin/java -jar /opt/bwf/skrylov-service.war --spring.config.location=/opt/skrylov/config/application.properties
+ExecStart=/usr/bin/java -jar /opt/skrylov/skrylov-service.war --spring.config.location=/opt/skrylov/config/application.properties
 SuccessExitStatus=143
 TimeoutStopSec=2
 User=skrylov
