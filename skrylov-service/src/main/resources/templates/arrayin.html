@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="arrayin"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Введите строку чисел, указанных через запятую. Например:
+    56,23,86,-67,90.</h1>
+<h1>Программа создаст массив чисел, отсортирует по возрастанию и выведет результат</h1>
+
+<form action="/arrayin" method="post">
+    <input type="text" name="Z" placeholder="Введите строку чисел через запятую">
+    <button type="submit" class="btn btn-success">Подтвердить</button>
+</form>
+
+</body>
+</html>
