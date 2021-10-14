@@ -27,6 +27,7 @@ public class Collection{
        for (i=n; i<=things.length-1;i++) {
          things2[i] = things[i++];
        }
+         i--;
    }
 
 }
