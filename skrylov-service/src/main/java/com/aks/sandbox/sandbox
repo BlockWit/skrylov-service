@@ -28,6 +28,7 @@ public class Collection{
          things2[i] = things[i++];
        }
          i--;
+         things=things2;
    }
 
 }
