@@ -19,7 +19,7 @@ public class Car {
         return mass;
     }
 
-    public void setEngine1(Engine engine) {
+    public void setEngine(Engine engine) {
         this.engine = engine;
     }
 
