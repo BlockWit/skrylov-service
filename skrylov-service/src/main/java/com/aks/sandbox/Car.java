@@ -1,11 +1,14 @@
 package com.aks.sandbox;
 
 public class Car {
+
     private int mass;
-    private Engine engine1;
-    public Car(int mass, Engine engine1) {
+
+    private Engine engine;
+
+    public Car(int mass, Engine engine) {
         this.mass = mass;
-        this.engine1 = engine1;
+        this.engine = engine;
     }
 
     public void setMass(int mass) {
@@ -16,11 +19,11 @@ public class Car {
         return mass;
     }
 
-    public void setEngine1(Engine engine1) {
-        this.engine1 = engine1;
+    public void setEngine1(Engine engine) {
+        this.engine = engine;
     }
 
-    public Engine getEngine1() {
-        return engine1;
+    public Engine getEngine() {
+        return engine;
     }
 }
