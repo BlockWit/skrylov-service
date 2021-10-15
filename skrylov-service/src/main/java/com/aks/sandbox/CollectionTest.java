@@ -6,9 +6,9 @@ public class CollectionTest {
         Collection collection = new Collection();
         collection.add(27);
         if (collection.get(0) == 27) {
-                System.out.println("Зашибись");
+                System.out.println("Ok");
         } else {
-                System.out.println("Косяк");
+                System.out.println("Fail");
             }
         }
     }

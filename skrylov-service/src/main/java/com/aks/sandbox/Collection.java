@@ -2,34 +2,33 @@ package com.aks.sandbox;
 
 public class Collection{
     private int i = 0;
-    private int n;
-    private int[ ] things = new int[3];
+    private int[ ] elements = new int[3];
 
     public void add (int element) {
-      things[i] = element;
+      elements[i] = element;
       i++;
-      if (i==things.length-1) {
-         int [ ] things1 = new int [things.length + 2];
-              for (int k=0; k<=things.length; k++) {
-               things1[ k ] = things [ k ];
+      if (i==elements.length-1) {
+         int [ ] things1 = new int [elements.length + 2];
+              for (int k=0; k<=elements.length; k++) {
+               things1[ k ] = elements [ k ];
                }
-          things=things1;
+          elements=things1;
        }
     }
     public int get(int i) {
-        return things[i];
+        return elements[i];
    }
 
    public void del(int n) {
-     int [] things2 = new int [things.length - 1];
+     int [] things2 = new int [elements.length - 1];
        for (i=0; i<n; i++) {
-         things2[i] = things[i];
+         things2[i] = elements[i];
        }
-       for (i=n; i<=things.length-1;i++) {
-         things2[i] = things[i++];
+       for (i=n; i<=elements.length-1;i++) {
+         things2[i] = elements[i++];
        }
          i--;
-         things=things2;
+         elements=things2;
    }
 
 }
