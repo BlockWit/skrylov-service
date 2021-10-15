@@ -1,11 +1,12 @@
+package com.aks.sandbox;
 
 public class Collection{
     private int i = 0;
     private int n;
     private int[ ] things = new int[3];
 
-    public void add (int thing) {
-      things[i] = thing;
+    public void add (int element) {
+      things[i] = element;
       i++;
       if (i==things.length-1) {
          int [ ] things1 = new int [things.length + 2];
