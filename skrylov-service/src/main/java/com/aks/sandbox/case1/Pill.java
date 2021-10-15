@@ -29,9 +29,9 @@ public class Pill {
 
     public boolean isSpoiled() {
         if ((System.currentTimeMillis() - issueDate) > expirationPeriod) {
-            return false;
-        } else {
             return true;
+        } else {
+            return false;
         }
     }
 }
