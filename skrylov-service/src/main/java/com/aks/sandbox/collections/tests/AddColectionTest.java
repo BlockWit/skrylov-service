@@ -1,6 +1,8 @@
-package com.aks.sandbox;
+package com.aks.sandbox.collections.tests;
 
-public class CollectionTest {
+import com.aks.sandbox.collections.Collection;
+
+public class AddColectionTest {
     public static void main(String[] args) {
 
         Collection collection = new Collection();

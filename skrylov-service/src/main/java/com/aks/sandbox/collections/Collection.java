@@ -1,4 +1,4 @@
-package com.aks.sandbox;
+package com.aks.sandbox.collections;
 
 public class Collection{
     private int i = 0;
