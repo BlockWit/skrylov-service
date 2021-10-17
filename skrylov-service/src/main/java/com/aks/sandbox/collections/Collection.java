@@ -9,7 +9,7 @@ public class Collection{
       i++;
       if (i==elements.length-1) {
          int [ ] things1 = new int [elements.length + 2];
-              for (int k=0; k<=elements.length; k++) {
+              for (int k=0; k<=elements.length-1; k++) {
                things1[ k ] = elements [ k ];
                }
           elements=things1;
