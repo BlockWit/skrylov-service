@@ -7,7 +7,8 @@ public class AddCollectionTest {
 
         Collection collection = new Collection();
         collection.add(27);
-        if (collection.get(0) == 27) {
+        collection.add(2);
+        if (collection.get(1) == 2) {
                 System.out.println("Ok");
         } else {
                 System.out.println("Fail");
