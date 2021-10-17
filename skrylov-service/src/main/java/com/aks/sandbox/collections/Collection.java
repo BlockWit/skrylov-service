@@ -24,8 +24,8 @@ public class Collection{
        for (i=0; i<n; i++) {
          things2[i] = elements[i];
        }
-       for (i=n; i<=elements.length-1;i++) {
-         things2[i] = elements[i++];
+       for (i=n; i<=elements.length-2;i++) {
+         things2[i] = elements[i+1];
        }
          i--;
          elements=things2;
