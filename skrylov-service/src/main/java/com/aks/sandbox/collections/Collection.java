@@ -33,11 +33,13 @@ public class Collection{
 
    public int qty(int[] elements) {
         int q = 0;
-        for (i=0, i<=elements.length-1, i++) {
+        for (i=0; i<=elements.length-1; i++) {
             if (elements[i] != 0) {
                 q++;
             }
         }
+
+        return q;
    }
 }
 
