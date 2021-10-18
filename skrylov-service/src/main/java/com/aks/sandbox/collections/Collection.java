@@ -31,7 +31,7 @@ public class Collection{
          elements=things2;
    }
 
-   public int size(int[] elements) {
+   public int size() {
         int q = 0;
         for (i=0; i<=elements.length-1; i++) {
             if (elements[i] != 0) {
