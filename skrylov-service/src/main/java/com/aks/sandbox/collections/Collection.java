@@ -1,6 +1,7 @@
 package com.aks.sandbox.collections;
 
 public class Collection{
+    //public int size;
     private int i = 0;
     private int[ ] elements = new int[3];
 
@@ -8,7 +9,7 @@ public class Collection{
       elements[i] = element;
       i++;
       if (i==elements.length-1) {
-         int [ ] things1 = new int [elements.length + 2];
+         int [ ] things1 = new int [elements.length + 1];
               for (int k=0; k<=elements.length-1; k++) {
                things1[ k ] = elements [ k ];
                }
