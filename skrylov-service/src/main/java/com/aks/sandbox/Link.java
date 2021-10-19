@@ -7,8 +7,26 @@ public class Link {
 
     private Link linkNext;
 
+    public Link(int id, Link linkPrev, Link linkNext) {
+        this.id = id;
+        this.linkPrev = linkPrev;
+        this.linkNext = linkNext;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public void connectPrev(Link linkPrev) {
         this.linkPrev = linkPrev;
+    }
+
+    public Link getLinkPrev(){
+        return linkPrev;
     }
 
     public void disconnectPrev() {
@@ -17,6 +35,10 @@ public class Link {
 
     public void connectNext(Link linkNext) {
         this.linkNext = linkNext;
+    }
+
+    public Link getLinkNext() {
+        return linkNext;
     }
 
     public void disconnectNext() {
