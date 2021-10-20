@@ -1,13 +1,14 @@
 package com.aks.sandbox.collections;
 
-public class Collection2 {
+  public class Collection2 {
 
     private int sizeCollection;
 
     public void add(int element) {
-        Box box = new Box(id);
+        Box box = new Box(int id);
         box.setElement(int element);
     }
+
 
 
 
