@@ -13,6 +13,8 @@ public class Box {           // box - ячейка коллекции, в кот
 
     public Box(int count) {     // конструктор фактически заменяет сеттер, поэтому сеттер не делаю
         this.count = count;
+        //this.boxPrev = boxPrev;
+        //this.boxNext = boxNext;
     }
 
     public int getId() {
