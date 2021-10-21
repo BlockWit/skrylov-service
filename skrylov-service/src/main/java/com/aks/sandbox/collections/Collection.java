@@ -1,46 +1,39 @@
 package com.aks.sandbox.collections;
 
 public class Collection {
-    private int i = 0;  //переименовать осознанно
-    private int[] elements = new int[1];
+    private int count = 0;                      // количество элементов в коллекции
+    private int[] elements = new int[3];
 
     public void add(int element) {
-        elements[i] = element;
-        i++;
-        if (i == elements.length) {
-            int[] elements1 = new int[elements.length + 1];
-            for (int k = 0; k <= elements.length; k++) {
+        elements[count] = element;
+        count++;
+        if (count == elements.length - 1) {
+            int[] elements1 = new int[elements.length + 2];
+            for (int k = 0; k <= elements.length - 1; k++) {
                 elements1[k] = elements[k];
             }
             elements = elements1;
         }
     }
 
-    public int get(int i) {
-        return elements[i];
+    public int get(int count) {
+        return elements[count];
     }
 
     public void del(int n) {
         int[] elements2 = new int[elements.length - 1];
-        for (i = 0; i < n; i++) {
-            elements2[i] = elements[i];
+        for (int m = 0; m < n; m++) {
+            elements2[m] = elements[m];
         }
-        for (i = n; i <= elements.length - 2; i++) {
-            elements2[i] = elements[i + 1];
+        for (int l= n; l <= elements.length - 2; l++) {
+            elements2[l] = elements[l + 1];
         }
-        i--;
+        count--;
         elements = elements2;
     }
 
     public int size() {
-        int q = 0;
-        for (i = 0; i <= elements.length - 1; i++) {
-            if (elements[i] != 0) {
-                q++;
-            }
-        }
-
-        return q;
+        return count;
     }
 }
 

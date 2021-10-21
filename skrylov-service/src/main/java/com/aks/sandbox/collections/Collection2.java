@@ -5,8 +5,8 @@ package com.aks.sandbox.collections;
     private int sizeCollection;
 
     public void add(int element) {
-        Box box = new Box(int id);
-        box.setElement(int element);
+        Box box = new Box(1);
+        box.setElement(element);
     }
 
 
