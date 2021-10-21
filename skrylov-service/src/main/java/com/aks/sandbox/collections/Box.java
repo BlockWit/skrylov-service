@@ -2,7 +2,7 @@ package com.aks.sandbox.collections;
 
 public class Box {           // box - ячейка коллекции, в которую кладётся элемент коллекции
 
-    private int id;          // id -индекс ячейки коллекции
+    private int count;          // id -индекс ячейки коллекции
 
     //private Box boxPrev;     // не понимаю всё-таки - мы в чертёж Box засовываем размер с ссылкой Box
                              // - открываем её и видим чертёж с ссылкой Box -это бесконечность. Кроме того - проще иметь id, чем пред
@@ -11,12 +11,12 @@ public class Box {           // box - ячейка коллекции, в кот
 
     private int element;     // элемент коллекции (вещь), который кладётся в ячейку с индексом id
 
-    public Box(int id) {     // конструктор фактически заменяет сеттер, поэтому сеттер не делаю
-        this.id = id;
+    public Box(int count) {     // конструктор фактически заменяет сеттер, поэтому сеттер не делаю
+        this.count = count;
     }
 
     public int getId() {
-        return id;
+        return count;
     }
 
     public void setElement(int element) {

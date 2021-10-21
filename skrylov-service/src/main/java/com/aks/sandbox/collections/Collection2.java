@@ -2,10 +2,11 @@ package com.aks.sandbox.collections;
 
   public class Collection2 {
 
-    private int sizeCollection;
+    private int count = 0;
 
     public void add(int element) {
-        Box box = new Box(1);
+        count++;
+        Box box = new Box(count);
         box.setElement(element);
     }
 
