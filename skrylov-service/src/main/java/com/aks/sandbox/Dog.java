@@ -33,5 +33,6 @@ public class Dog {
         } else {
             infoSatiety = "Голодная";
         }
+        return infoSatiety;
     }
 }
