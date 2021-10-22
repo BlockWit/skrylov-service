@@ -2,9 +2,11 @@ package com.aks.sandbox;
 
 public class Dog {
 
-    private String name = "Guchka";
+    private String name;
 
     private int volumeStomach;
+
+    private int totalVolumeFood;
 
     public Dog(String name, int volumeStomach) {
         this.name = name;
@@ -22,11 +24,17 @@ public class Dog {
     public int getVolumeStomach() {
         return volumeStomach;
     }
+    public void setTotalVolumeFood(int totalVolumeFood) {
+        this.totalVolumeFood = totalVolumeFood;
+    }
+    public int getTotalVolumeFood() {
+        return totalVolumeFood;
+    }
     public void eat(int volumeNewFood) {
         int totalVolumeFood = 0;
         totalVolumeFood = totalVolumeFood + volumeNewFood;
     }
-    public String satiety(int totalVolumeFood) {
+    public String satiety() {
         String infoSatiety;
         if (totalVolumeFood > volumeStomach/2) {
             infoSatiety = "Сыта";
