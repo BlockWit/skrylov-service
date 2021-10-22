@@ -14,17 +14,5 @@ package com.aks.sandbox.collections;
         box.setElement(element);
     }
 
-    public int get(int count) {
-        int element = box.element(count);
-        return element;
-    }
-
-
-
-
-
-
-
-
 
 }

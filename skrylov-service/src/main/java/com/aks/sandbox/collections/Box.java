@@ -25,7 +25,7 @@ public class Box {           // box - ячейка коллекции, в кот
         this.element = element;
     }
 
-    public int getElement() {
+    public int getElement(int count) {
         return element;
     }
 }
