@@ -31,16 +31,10 @@ public class Dog {
         return totalVolumeFood;
     }
     public void eat(int volumeNewFood) {
-        int totalVolumeFood = 0;
         totalVolumeFood = totalVolumeFood + volumeNewFood;
     }
-    public String satiety() {
-        String infoSatiety;
-        if (totalVolumeFood > volumeStomach/2) {
-            infoSatiety = "Сыта";
-        } else {
-            infoSatiety = "Голодная";
-        }
-        return infoSatiety;
+    public boolean satiety() {
+        return totalVolumeFood > volumeStomach/2;
     }
+
 }
