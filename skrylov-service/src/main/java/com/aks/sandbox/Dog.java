@@ -22,7 +22,7 @@ public class Dog {
     public int getVolumeStomach() {
         return volumeStomach;
     }
-    public void volumeFood(int volumeNewFood) {
+    public void eat(int volumeNewFood) {
         int totalVolumeFood = 0;
         totalVolumeFood = totalVolumeFood + volumeNewFood;
     }
