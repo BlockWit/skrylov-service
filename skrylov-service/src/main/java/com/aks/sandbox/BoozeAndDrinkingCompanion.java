@@ -33,8 +33,8 @@ public class BoozeAndDrinkingCompanion {
     public void withdraw(int volumeForDrink) {
         volumeOfBottle = volumeOfBottle - volumeForDrink;
     }
-    public void drink(int volumeOfBottle) {
-        volumeOfBottle =  volumeOfBottle-volumeOfLiver;
+    public void drink(int Booze) {
+        Booze =  Booze-volumeOfLiver;
     }
 
 }
