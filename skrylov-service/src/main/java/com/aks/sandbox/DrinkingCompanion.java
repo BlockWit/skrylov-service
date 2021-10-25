@@ -1,20 +1,12 @@
 package com.aks.sandbox;
 
-public class BoozeAndDrinkingCompanion {
-
-    private int volumeOfBottle;
+public class DrinkingCompanion {
 
     private int volumeOfLiver;  //объём печени = объём, который могут выпить собутыльники
 
     private String name;
 
-    public BoozeAndDrinkingCompanion(int volumeOfBottle) {
-        this.volumeOfBottle = volumeOfBottle;
-    }
-    public int getVolumeOfBottle() {
-        return volumeOfBottle;
-    }
-    public BoozeAndDrinkingCompanion(int volumeOfLiver, String name){
+    public DrinkingCompanion (int volumeOfLiver, String name){
         this.volumeOfLiver = volumeOfLiver;
         this.name = name;
     }
@@ -30,11 +22,8 @@ public class BoozeAndDrinkingCompanion {
     public String getName() {
         return name;
     }
-    public void withdraw(int volumeForDrink) {
-        volumeOfBottle = volumeOfBottle - volumeForDrink;
-    }
-    public void drink(int Booze) {
-        Booze =  Booze-volumeOfLiver;
+    public void drink(int booze) {
+    booze = booze-volumeOfLiver;
     }
 
 }
