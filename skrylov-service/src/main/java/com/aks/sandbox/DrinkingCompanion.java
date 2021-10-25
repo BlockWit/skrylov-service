@@ -23,7 +23,7 @@ public class DrinkingCompanion {
         return name;
     }
     public void drink(int booze) {
-    booze = booze-volumeOfLiver;
+        booze = booze -volumeOfLiver;
     }
 
 }
