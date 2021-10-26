@@ -2,7 +2,7 @@ package com.aks.sandbox;
 
 public class Booze {
 
-    private int volumeOfBottle;
+    public int volumeOfBottle;
 
     public Booze(int volumeOfBottle) {
         this.volumeOfBottle = volumeOfBottle;

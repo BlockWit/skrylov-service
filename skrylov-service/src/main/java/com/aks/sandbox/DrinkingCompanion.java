@@ -22,8 +22,9 @@ public class DrinkingCompanion {
     public String getName() {
         return name;
     }
-    public void drink(int booze) {
-        booze = booze -volumeOfLiver;
+    public void drink(Class booze) {
+        Booze booze1 = new Booze(volumeOfLiver);
+        booze1.withdraw(volumeOfLiver);
     }
 
 }
