@@ -22,11 +22,8 @@ public class DrinkingCompanion {
     public String getName() {
         return name;
     }
-    Booze booze1 = new Booze(volumeOfLiver);
-
-    public void drink(Booze booze1) {
-        booze1.volumeOfBottle = booze1.getVolumeOfBottle() - volumeOfLiver;
-
-    }
+    public void drink(Booze booze) {
+        booze.withdraw(volumeOfLiver);
+        }
 
 }
