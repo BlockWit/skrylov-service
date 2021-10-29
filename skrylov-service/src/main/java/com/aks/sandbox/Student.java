@@ -14,6 +14,6 @@ public class Student {
         return experience;
     }
     public void train(Task task) {
-        experience = task.solve();
+        experience = experience + task.solve();
     }
 }
