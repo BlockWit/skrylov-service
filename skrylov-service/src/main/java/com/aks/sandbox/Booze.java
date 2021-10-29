@@ -11,8 +11,14 @@ public class Booze {
         return volumeOfBottle;
     }
     public int withdraw(int volumeForDrink) {
-        volumeOfBottle = volumeOfBottle - volumeForDrink;
-        return volumeOfBottle;
+        if (volumeForDrink < volumeOfBottle) {
+            volumeOfBottle = volumeOfBottle - volumeForDrink;
+            return volumeForDrink;
+        } else {
+            volumeForDrink = volumeOfBottle;
+            volumeOfBottle = 0;
+            return volumeForDrink;
+        }
     }
 
 

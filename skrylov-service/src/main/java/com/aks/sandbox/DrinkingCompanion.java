@@ -23,7 +23,7 @@ public class DrinkingCompanion {
         return name;
     }
     public void drink(Booze booze) {
-        booze.withdraw(volumeOfLiver);
+        volumeOfLiver = volumeOfLiver - booze.withdraw(volumeOfLiver);
         }
 
 }
