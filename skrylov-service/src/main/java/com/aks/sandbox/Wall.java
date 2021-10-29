@@ -13,7 +13,7 @@ public class Wall {
     public String getColor() {
         return color;
     }
-    public String paint(String newColor) {
+    public void paint(String newColor) {
         color = newColor;
     }
 }
