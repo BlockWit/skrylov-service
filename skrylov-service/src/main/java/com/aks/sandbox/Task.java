@@ -23,7 +23,12 @@ public class Task {
         return solved;
     }
     public int solve() {
-        solved = true;
-        return points;
+        if (solved = true) {
+            points = 0;
+            return points;
+        } else {
+            solved = true;
+            return points;
+        }
     }
 }
