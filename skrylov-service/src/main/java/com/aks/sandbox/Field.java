@@ -2,25 +2,25 @@ package com.aks.sandbox;
 
 public class Field {
 
-    private boolean haveBall;
+    private Ball ball;
 
-    public Field(boolean haveBall) {
-        this.haveBall = haveBall;
+    public Field(Ball ball) {
+        this.ball = ball;
     }
 
-    public void setHaveBall(boolean haveBall) {
-        this.haveBall = haveBall;
+    public void setHaveBall(Ball ball) {
+        this.ball = ball;
     }
 
-    public boolean getHaveBall() {
-        return haveBall;
+    public Ball getHaveBall() {
+        return ball;
     }
 
-    public void receiveBall() {
-        haveBall = true;
+    public void receiveBall(Ball ball) {
+        this.ball = ball;
     }
 
     public void giveAwayBall() {
-        haveBall = false;
+        ball = null;
     }
 }

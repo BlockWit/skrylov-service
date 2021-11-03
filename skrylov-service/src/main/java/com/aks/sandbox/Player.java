@@ -6,12 +6,12 @@ public class Player {
 
     private String name;
 
-    private boolean haveBall;
+    private Ball ball;
 
-    public Player(int number, String name, boolean haveBall) {
+    public Player(int number, String name, Ball ball) {
         this.number = number;
         this.name = name;
-        this.haveBall = haveBall;
+        this.ball = ball;
     }
 
     public void setNumber(int number) {
@@ -30,19 +30,19 @@ public class Player {
         return name;
     }
 
-    public void setHaveBall(boolean haveBall) {
-        this.haveBall = haveBall;
+    public void setBall(Ball ball) {
+        this.ball = ball;
     }
 
-    public boolean getHaveBall() {
-        return haveBall;
+    public Ball getBall() {
+        return ball;
     }
 
-    public void receiveBall() {
-        haveBall = true;
+    public void receiveBall(Ball ball) {
+        this.ball = ball;
     }
 
     public void giveAwayBall() {
-        haveBall = false;
+        ball = null;
     }
 }
