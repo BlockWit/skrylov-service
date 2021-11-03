@@ -1,4 +1,4 @@
-package com.aks.sandbox.case1;
+package com.aks.sandbox.cases.case1;
 
 public class Pill {
 
