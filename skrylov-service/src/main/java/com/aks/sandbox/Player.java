@@ -42,7 +42,8 @@ public class Player {
         this.ball = ball;
     }
 
-    public void giveAwayBall() {
+    public void giveAwayBall(Player player) {
+        player.receiveBall(ball);
         ball = null;
     }
 }
