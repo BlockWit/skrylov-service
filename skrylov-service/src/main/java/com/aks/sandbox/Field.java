@@ -20,7 +20,4 @@ public class Field {
         this.ball = ball;
     }
 
-    public void giveAwayBall() {
-        ball = null;
-    }
 }
