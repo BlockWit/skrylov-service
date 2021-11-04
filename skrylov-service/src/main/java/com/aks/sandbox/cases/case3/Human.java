@@ -35,8 +35,7 @@ public class Human {
             return baby;
         } else {
             System.out.println("Так дети не получатся");
-            Human fail = new Human(gender, brainVolume);
-            return fail;
+            return null;
         }
 
     }
