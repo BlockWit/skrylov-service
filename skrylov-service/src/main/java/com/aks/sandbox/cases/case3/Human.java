@@ -27,15 +27,18 @@ public class Human {
         return brainVolume;
     }
 
-    public Human fuck(Human human1, Human human2) {
-        if (human1.gender == "man", human2.gender == "female") {
-            Human human3 = new Human(gender, brainVolume);
-            brainVolume = (human1.brainVolume + human2.brainVolume) / 2;
-            human3.setBrainVolume(brainVolume);
-            return human3;
-        } else{
+    public Human fuck(Human mother) {
+        if (gender == "man" && mother.gender == "female") {
+            Human baby = new Human(gender, brainVolume);
+            brainVolume = (brainVolume + mother.brainVolume) / 2;
+            baby.setBrainVolume(brainVolume);
+            return baby;
+        } else {
             System.out.println("Так дети не получатся");
+            Human fail = new Human(gender, brainVolume);
+            return fail;
         }
+
     }
 
 }
