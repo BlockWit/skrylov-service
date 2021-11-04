@@ -6,6 +6,8 @@ public class Nigger {
 
     private Nigger nigger;
 
+    private int totalMass;
+
     public Nigger(int mass, Nigger nigger) {
         this.mass = mass;
         this.nigger = nigger;
@@ -25,6 +27,11 @@ public class Nigger {
 
     public Nigger getNigger() {
         return nigger;
+    }
+
+    public int addNigger(Nigger nigger) {
+        totalMass = totalMass + nigger.getMass();
+        return totalMass;
     }
 
 }

@@ -27,9 +27,15 @@ public class Precipice {
         return firstNigger;
     }
 
-    public void clamberFirstNigger(Nigger firstNigger) {
+    public void clamberFirstNigger(Nigger firstNigger, Nigger nigger) {
         this.firstNigger = firstNigger;
-        firstNigger.getMass()
+        if (firstNigger.getMass() < breakingPoint) {
+            if (firstNigger.getMass() + nigger.addNigger(nigger) < breakingPoint) {
+                nigger.addNigger(nigger);
+            };
+        } else {
+            System.out.println("Предел прочности превышен, падение");
+        }
     }
 
 }
