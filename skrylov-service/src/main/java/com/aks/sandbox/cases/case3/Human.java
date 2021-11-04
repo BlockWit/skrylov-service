@@ -28,7 +28,7 @@ public class Human {
     }
 
     public Human fuck(Human human1, Human human2) {
-        if (human1.gender = "man", human2.gender = "female") {
+        if (human1.gender == "man", human2.gender == "female") {
             Human human3 = new Human(gender, brainVolume);
             brainVolume = (human1.brainVolume + human2.brainVolume) / 2;
             human3.setBrainVolume(brainVolume);
