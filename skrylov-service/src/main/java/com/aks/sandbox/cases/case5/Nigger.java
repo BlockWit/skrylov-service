@@ -4,13 +4,11 @@ public class Nigger {
 
     private int mass;
 
-    private Nigger nigger;
+    private Nigger nextNigger;
 
-    private int totalMass;
-
-    public Nigger(int mass, Nigger nigger) {
+    public Nigger(int mass, Nigger nextNigger) {
         this.mass = mass;
-        this.nigger = nigger;
+        this.nextNigger = nextNigger;
     }
 
     public void setMass(int mass) {
@@ -22,16 +20,11 @@ public class Nigger {
     }
 
     public void setNigger(Nigger nigger) {
-        this.nigger = nigger;
+        this.nextNigger = nextNigger;
     }
 
     public Nigger getNigger() {
-        return nigger;
-    }
-
-    public int addNigger(Nigger nigger) {
-        totalMass = totalMass + nigger.getMass();
-        return totalMass;
+        return nextNigger;
     }
 
 }
