@@ -28,13 +28,17 @@ public class Precipice {
     }
 
     public void climbNextNigger(Nigger nextNigger) {
-        if (firstNigger.getMass() + nextNigger.getMass() < breakingPoint) {
-            System.out.println("Висим дальше");
+        nextNigger.setNigger(nextNigger);
+        if (firstNigger.getMass() > 0) {
+            if (firstNigger.getMass() + nextNigger.getMass() < breakingPoint) {
+                System.out.println("Висим дальше");
+            } else {
+                System.out.println("Предел прочности превышен, падение");
+            }
         } else {
-            System.out.println("Предел прочности превышен, падение");
+            this.firstNigger = firstNigger;
         }
     }
+
+
 }
-
-
-
