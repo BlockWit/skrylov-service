@@ -19,11 +19,11 @@ public class Nigger {
         return mass;
     }
 
-    public void setNigger(Nigger nigger) {
+    public void setNextNigger(Nigger nextNigger) {
         this.nextNigger = nextNigger;
     }
 
-    public Nigger getNigger() {
+    public Nigger getNextNigger() {
         return nextNigger;
     }
 
