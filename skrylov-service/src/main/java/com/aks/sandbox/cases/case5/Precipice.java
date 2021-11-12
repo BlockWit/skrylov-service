@@ -27,7 +27,7 @@ public class Precipice {
         return firstNigger;
     }
 
-    public void climbNextNigger(Nigger currentNigger) {
+    /* public void climbNextNigger(Nigger currentNigger) {
         if (firstNigger == null) {
             firstNigger = currentNigger;
             int totalMass = 0;
@@ -44,6 +44,32 @@ public class Precipice {
                 }
             }
         }
-    }
+    } */
 
+    public void climbNextNigger(Nigger nextNigger) {
+        if (firstNigger == null)  {
+            if(nextNigger.getMass() > breakingPoint) {
+                System.out.println("Предел прочности превышен, падение");
+                return;
+            }
+            firstNigger = nextNigger;
+        } else {
+            int totalMass = 0;
+
+            Nigger currentNigger = firstNigger;
+            Nigger lastNigger = firstNigger;
+
+            while (currentNigger != null) {
+                totalMass = totalMass + currentNigger.getMass();
+                lastNigger = currentNigger;
+                currentNigger = currentNigger.getNextNigger();
+            }
+
+            if(totalMass > breakingPoint) {
+                System.out.println("Предел прочности превышен, падение");
+            } else {
+                lastNigger.setNextNigger(nextNigger);
+            }
+        }
+    }
 }
