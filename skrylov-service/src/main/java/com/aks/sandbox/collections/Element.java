@@ -4,11 +4,11 @@ public class Element {
 
     private int id;
 
-    private Element Element;
+    private Element nextElement;
 
     public Element(int id, Element nextElement) {
         this.id = id;
-        this.Element = nextElement;
+        this.nextElement = nextElement;
     }
 
     public void setId(int id) {
@@ -19,12 +19,12 @@ public class Element {
         return id;
     }
 
-    public void setElement(Element Element) {
-        this.Element = Element;
+    public void setNextElement(Element nextElement) {
+        this.nextElement = nextElement;
     }
 
-    public Element getElement() {
-        return Element;
+    public Element getNextElement() {
+        return nextElement;
     }
 
 }
