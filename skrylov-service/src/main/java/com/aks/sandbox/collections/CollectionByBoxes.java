@@ -17,7 +17,7 @@ public class CollectionByBoxes {
         return firstBox;
     }
 
-    public void addElement(Integer nextElementOfCollection) {
+    public void add(Integer nextElementOfCollection) {
         if (firstBox == null) {
             firstBox = new Box(nextElementOfCollection, null);
         } else {
@@ -31,7 +31,13 @@ public class CollectionByBoxes {
         }
     }
 
-    public Integer getLastElementOfCollection(Box withdrawBox) {
-
+    public Integer get(int index) {
+        Box currentBox = firstBox;
+        int currentIndex = 0;
+        while(currentIndex != index) {
+            currentIndex++;
+            currentBox = currentBox.getNextBox();
+        }
+        return currentBox.getElementOfCollection();
     }
 }
