@@ -16,8 +16,8 @@ public class Collection {
         }
     }
 
-    public int get(int count) {
-        return elements[count];
+    public int get(int index) {
+        return elements[index];
     }
 
     public void del(int n) {

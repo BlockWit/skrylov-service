@@ -2,21 +2,11 @@ package com.aks.sandbox.collections;
 
 public class CollectionByBoxes {
 
-    private int count = 0;   // кол-во элементов в коллекции
-
     private Box firstBox;
 
-    public CollectionByBoxes(int count, Box firstBox) {
-        this.count = count;
+    public CollectionByBoxes(Box firstBox) {
+
         this.firstBox = firstBox;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public int getCount() {
-        return count;
     }
 
     public void setFirstBox(Box firstBox) {
@@ -29,14 +19,19 @@ public class CollectionByBoxes {
 
     public void addElement(Integer nextElementOfCollection) {
         if (firstBox == null) {
-            count++;
-            Box currentBox = firstBox.getNextBox();   //перед этим по идее сначала надо вызвать метод setNextBox, но не получается
-            Box firstBox = new Box(nextElementOfCollection, 1, null, currentBox);
-            firstBox.setElementOfCollection(nextElementOfCollection);
-
+            firstBox = new Box(nextElementOfCollection, null);
         } else {
             Box currentBox = firstBox;
-            currentBox = firstBox.getNextBox();
+            Box lastBox = firstBox;
+            while (currentBox != null) {
+                lastBox = currentBox;
+                currentBox = lastBox.getNextBox();
+            }
+            lastBox.setNextBox(new Box(nextElementOfCollection, null));
         }
+    }
+
+    public Integer getLastElementOfCollection(Box withdrawBox) {
+
     }
 }
