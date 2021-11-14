@@ -31,13 +31,36 @@ public class CollectionByBoxes {
         }
     }
 
-    public Integer get(int index) {
+    public int get(int index) {
         Box currentBox = firstBox;
         int currentIndex = 0;
-        while(currentIndex != index) {
+        while (currentIndex != index) {
             currentIndex++;
             currentBox = currentBox.getNextBox();
         }
         return currentBox.getElementOfCollection();
+    }
+
+    public int size() {
+        Box currentBox = firstBox;
+        int count = 0;
+        while (currentBox != null) {
+            count++;
+            currentBox = currentBox.getNextBox();
+        }
+        return count;
+    }
+
+    public void del(int index) {
+        Box currentBox = firstBox;
+        int currentIndex = 0;
+        while (currentIndex != index) {
+            currentIndex++;
+            currentBox = currentBox.getNextBox();
+        }
+        currentBox.setElementOfCollection(null);
+        while (currentBox != null) {
+            currentBox = currentBox.getNextBox();
+        }
     }
 }
