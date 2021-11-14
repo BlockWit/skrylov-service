@@ -52,15 +52,24 @@ public class CollectionByBoxes {
     }
 
     public void del(int index) {
-        Box currentBox = firstBox;
+        Box boxForDel = firstBox;
         int currentIndex = 0;
         while (currentIndex != index) {
             currentIndex++;
-            currentBox = currentBox.getNextBox();
+            boxForDel = boxForDel.getNextBox();
         }
-        currentBox.setElementOfCollection(null);
-        while (currentBox != null) {
-            currentBox = currentBox.getNextBox();
+        currentIndex = 0;
+        Box prevBoxForDel = firstBox;
+        while (currentIndex != (index-1)) {
+            currentIndex++;
+            prevBoxForDel = prevBoxForDel.getNextBox();
         }
+        currentIndex = 0;
+        Box nextBoxForDel = firstBox;
+        while(currentIndex != (index+1)) {
+            currentIndex++;
+            nextBoxForDel = nextBoxForDel.getNextBox();
+        }
+        prevBoxForDel.setNextBox(nextBoxForDel);
     }
 }
