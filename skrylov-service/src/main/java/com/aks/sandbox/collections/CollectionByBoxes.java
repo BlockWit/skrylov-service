@@ -70,6 +70,6 @@ public class CollectionByBoxes {
             currentIndex++;
             nextBoxForDel = nextBoxForDel.getNextBox();
         }
-        prevBoxForDel.setNextBox(nextBoxForDel)
+        prevBoxForDel.setNextBox(nextBoxForDel);
     }
 }
