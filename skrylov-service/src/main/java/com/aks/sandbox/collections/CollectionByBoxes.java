@@ -1,6 +1,6 @@
 package com.aks.sandbox.collections;
 
-public class CollectionByBoxes {
+public class CollectionByBoxes implements InterfacesOfCollection {
 
     private Box firstBox;
 

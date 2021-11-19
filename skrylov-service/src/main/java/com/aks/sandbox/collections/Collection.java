@@ -1,11 +1,11 @@
 package com.aks.sandbox.collections;
 
-public class Collection {
+public class Collection implements InterfacesOfCollection {
     private int count = 0;                      // количество элементов в коллекции
     private int[] elements = new int[3];
 
-    public void add(int element) {
-        elements[count] = element;
+    public void add(Integer nextElementOfCollection) {
+        elements[count] = nextElementOfCollection;
         count++;
         if (count == elements.length - 1) {
             int[] elements1 = new int[elements.length + 2];
