@@ -1,6 +1,6 @@
 package com.aks.sandbox.collections;
 
-public interface InterfacesOfCollection {
+public interface IList {
 
     public void add(Integer nextElementOfCollection);
 
@@ -9,5 +9,7 @@ public interface InterfacesOfCollection {
     public int size();
 
     public void del(int index);
+
+    // public void addArrayListTest();
 
 }

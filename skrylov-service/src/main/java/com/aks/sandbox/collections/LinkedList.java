@@ -1,10 +1,10 @@
 package com.aks.sandbox.collections;
 
-public class CollectionByBoxes implements InterfacesOfCollection {
+public class LinkedList implements IList {
 
     private Box firstBox;
 
-    public CollectionByBoxes(Box firstBox) {
+    public LinkedList(Box firstBox) {
 
         this.firstBox = firstBox;
     }

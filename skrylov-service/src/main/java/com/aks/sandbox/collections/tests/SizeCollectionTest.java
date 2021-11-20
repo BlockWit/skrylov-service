@@ -1,21 +1,21 @@
 package com.aks.sandbox.collections.tests;
 
-import com.aks.sandbox.collections.Collection;
+import com.aks.sandbox.collections.ArrayList;
 
 public class SizeCollectionTest {
     public static void main(String[] args) {
-        Collection collection = new Collection();
+        ArrayList arrayList = new ArrayList();
 
-        collection.add(27);
-        collection.add(2);
-        collection.add(27);
-        collection.add(2);
-        collection.del(1);
+        arrayList.add(27);
+        arrayList.add(2);
+        arrayList.add(27);
+        arrayList.add(2);
+        arrayList.del(1);
 
-        int p = collection.size();
+        int p = arrayList.size();
         System.out.println(p);
 
-        if (collection.size() == 3) {
+        if (arrayList.size() == 3) {
             System.out.println("OK");
         } else {
             System.out.println("Fail");

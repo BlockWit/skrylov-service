@@ -1,6 +1,6 @@
 package com.aks.sandbox.collections;
 
-public class Collection implements InterfacesOfCollection {
+public class ArrayList implements IList {
     private int count = 0;                      // количество элементов в коллекции
     private int[] elements = new int[3];
 
