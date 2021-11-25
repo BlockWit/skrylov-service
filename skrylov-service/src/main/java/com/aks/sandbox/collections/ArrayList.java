@@ -4,6 +4,7 @@ public class ArrayList implements IList {
     private int count = 0;                      // количество элементов в коллекции
     private int[] elements = new int[3];
 
+    @Override
     public void add(Integer nextElementOfCollection) {
         elements[count] = nextElementOfCollection;
         count++;
@@ -16,10 +17,12 @@ public class ArrayList implements IList {
         }
     }
 
+    @Override
     public int get(int index) {
         return elements[index];
     }
 
+    @Override
     public void del(int n) {
         int[] elements2 = new int[elements.length - 1];
         for (int m = 0; m < n; m++) {
@@ -32,6 +35,7 @@ public class ArrayList implements IList {
         elements = elements2;
     }
 
+    @Override
     public int size() {
         return count;
     }

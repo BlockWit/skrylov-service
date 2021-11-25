@@ -17,6 +17,7 @@ public class LinkedList implements IList {
         return firstBox;
     }
 
+    @Override
     public void add(Integer nextElementOfCollection) {
         if (firstBox == null) {
             firstBox = new Box(nextElementOfCollection, null);
@@ -31,6 +32,7 @@ public class LinkedList implements IList {
         }
     }
 
+    @Override
     public int get(int index) {
         Box currentBox = firstBox;
         int currentIndex = 0;
@@ -41,6 +43,7 @@ public class LinkedList implements IList {
         return currentBox.getElementOfCollection();
     }
 
+    @Override
     public int size() {
         Box currentBox = firstBox;
         int count = 0;
@@ -51,6 +54,7 @@ public class LinkedList implements IList {
         return count;
     }
 
+    @Override
     public void del(int index) {
         Box boxForDel = firstBox;
         int currentIndex = 0;

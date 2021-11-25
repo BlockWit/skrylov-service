@@ -10,6 +10,6 @@ public interface IList {
 
     public void del(int index);
 
-    // public void addArrayListTest();
+
 
 }
