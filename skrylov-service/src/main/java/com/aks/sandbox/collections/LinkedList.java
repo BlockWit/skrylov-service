@@ -4,10 +4,10 @@ public class LinkedList implements IList {
 
     private Box firstBox;
 
-    public LinkedList(Box firstBox) {
+    /*public LinkedList(Box firstBox) {
 
         this.firstBox = firstBox;
-    }
+    }*/
 
     public void setFirstBox(Box firstBox) {
         this.firstBox = firstBox;
