@@ -22,11 +22,20 @@ public class BookApp {
             list.add(book);
             }
 
-        for (int i=1; i <= 999999; i++) {
-                if (i == numberForFinding) {
-                    System.out.println(i);
+        for (int i=1; i <= list.size(); i++) {
+                if (numberForFinding == list.get(i).getNumber()) {
+                    System.out.println(list.get(i).getNumber());
                 }
             }
+
+        // Лучше сделать так, суть та же, но работает быстрее:
+
+        for (int i=1; i <= list.size(); i++) {
+            Book book = list.get(i);
+            if (numberForFinding == book.getNumber()) {
+                System.out.println(book.getNumber());
+            }
+        }
 
         }
 
