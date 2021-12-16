@@ -8,6 +8,9 @@ package com.aks.sandbox.cases.case6;
 
 import java.util.ArrayList;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class Library {
 
     private ArrayList<Book> list;
@@ -16,19 +19,27 @@ public class Library {
         list.add(book);
     }
 
-    public Book find(int ISBN) {
-        Book findingBook = null;
-        for (int i=1; i <= list.size(); i++) {
+    public Book find(ArrayList<Book> list, int ISBN) {
+
+
+        Collections.sort(list, new Comparator<Book>() {
+            public int compare(Book book1, Book book2) {
+                return book1.toString().compareTo(book2.toString());
+            }
+        });
+
+        //Book findingBook = null;
+        for (int i = 1; i <= list.size(); i++) {
             Book book = list.get(i);
             if (ISBN == book.getNumber()) {
                 System.out.println(book.getNumber());
-                findingBook = book;
-
+                //findingBook = book;
+                return book;
             }
 
         }
-        return findingBook;
+        return null;
     }
 
-
 }
+
