@@ -2,17 +2,17 @@ package com.aks.sandbox.cases.case6;
 
 public class Book {
 
-    private int ISBN;
+    private Integer ISBN;
 
-    public Book(int ISBN) {
+    public Book(Integer ISBN) {
         this.ISBN = ISBN;
     }
 
-    public void setNumber(int ISBNr) {
+    public void setNumber(Integer ISBN) {
         this.ISBN = ISBN;
     }
 
-    public int getNumber() {
+    public Integer getNumber() {
         return ISBN;
     }
 }

@@ -21,10 +21,9 @@ public class Library {
 
     public Book find(ArrayList<Book> list, int ISBN) {
 
-
         Collections.sort(list, new Comparator<Book>() {
             public int compare(Book book1, Book book2) {
-                return book1.toString().compareTo(book2.toString());
+                return book1.getNumber().compareTo(book2.getNumber());
             }
         });
 
