@@ -2,7 +2,8 @@
 //В классе будет список книг
 //У Library будут два метода
 //1. Добавить книгу - add(Book book)
-//2. Найти книгу с указанным книжным номером find(int ISBN)
+//2. Найти книгу с указанным книжным номером find(int ISBN).
+//3. Написать метод нахождения книги через деление на 2.
 
 package com.aks.sandbox.cases.case6;
 
@@ -31,7 +32,7 @@ public class Library {
         for (int i = 1; i <= list.size(); i++) {
             Book book = list.get(i);
             if (ISBN == book.getNumber()) {
-                System.out.println(book.getNumber());
+                System.out.println("Найдена книга с ISBN: " + book.getNumber());
                 //findingBook = book;
                 return book;
             }
@@ -40,5 +41,30 @@ public class Library {
         return null;
     }
 
+    public Book findViaHalving(ArrayList<Book> list, int ISBN) {
+
+        Book book = list.get(list.size() / 2);
+
+        if (ISBN == book.getNumber()) {
+            System.out.println("Найдена книга с ISBN: " + book.getNumber());
+        } else {
+            while (ISBN == book.getNumber()) {
+                int delitel = 2;
+                if (ISBN > book.getNumber()) {
+                    book = list.get(list.size() / 2 / delitel);
+                    delitel = delitel * 2;
+                    book.getNumber();
+                } else {
+                    book = list.get(list.size() / 2 / delitel);
+                    delitel = delitel * 2;
+                    book.getNumber();
+                }
+
+            }
+        }
+        return book;
+    }
+
 }
+
 
