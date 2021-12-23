@@ -9,7 +9,7 @@ public class NumsFiftyToHundred {
 
 
         for (int j = 50; j <= 100; j++) {
-            for (int i = 0; i <= 10; i++) {
+            for (int i = 1; i <= 10; i++) {
                 System.out.println(j);
             }
         }

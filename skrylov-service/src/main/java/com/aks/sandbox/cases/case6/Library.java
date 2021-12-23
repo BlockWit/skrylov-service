@@ -22,33 +22,18 @@ public class Library {
 
     public Book find(ArrayList<Book> list, int ISBN) {
 
-        Collections.sort(list, new Comparator<Book>() {
+        Collections.sort(list, new Comparator<Book>() {           //Сначала сортируем, потом ищем делением на два
             public int compare(Book book1, Book book2) {
                 return book1.getNumber().compareTo(book2.getNumber());
             }
         });
-
-        //Book findingBook = null;
-        for (int i = 1; i <= list.size(); i++) {
-            Book book = list.get(i);
-            if (ISBN == book.getNumber()) {
-                System.out.println("Найдена книга с ISBN: " + book.getNumber());
-                //findingBook = book;
-                return book;
-            }
-
-        }
-        return null;
-    }
-
-    public Book findViaHalving(ArrayList<Book> list, int ISBN) {
 
         Book book = list.get(list.size() / 2);
 
         if (ISBN == book.getNumber()) {
             System.out.println("Найдена книга с ISBN: " + book.getNumber());
         } else {
-            while (ISBN == book.getNumber()) {
+            while (ISBN != book.getNumber()) {
                 int delitel = 2;
                 if (ISBN > book.getNumber()) {
                     book = list.get(list.size() / 2 / delitel);
@@ -64,6 +49,21 @@ public class Library {
         }
         return book;
     }
+
+    /* public Book find(ArrayList<Book> list, int ISBN) {   //Обычный метод поиска книги
+
+        //Book findingBook = null;
+        for (int i = 1; i <= list.size(); i++) {
+            Book book = list.get(i);
+            if (ISBN == book.getNumber()) {
+                System.out.println("Найдена книга с ISBN: " + book.getNumber());
+                //findingBook = book;
+                return book;
+            }
+
+        }
+        return null;
+    } */
 
 }
 
