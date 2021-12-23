@@ -16,17 +16,26 @@ public class Library {
 
     private ArrayList<Book> list;
 
+    public Library(ArrayList<Book> list) {
+        this.list = list;
+    }
+
     public void add(Book book) {
         list.add(book);
     }
 
-    public Book find(ArrayList<Book> list, int ISBN) {
+    public Book find(int ISBN) {
 
         Collections.sort(list, new Comparator<Book>() {           //Сначала сортируем, потом ищем делением на два
             public int compare(Book book1, Book book2) {
                 return book1.getNumber().compareTo(book2.getNumber());
             }
         });
+
+        System.out.println("Отсортированный по ISBN список книг: ");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i).getNumber());
+        }
 
         Book book = list.get(list.size() / 2);
 
@@ -46,6 +55,7 @@ public class Library {
                 }
 
             }
+            System.out.println("Найдена книга с ISBN: " + book.getNumber());
         }
         return book;
     }
