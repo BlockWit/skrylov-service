@@ -6,28 +6,19 @@ public class LibraryTestApp {
 
     public static void main(String[] args) {
 
-    Book bookStrugackie = new Book(1);
-    Book bookBradbary = new Book(2);
-    Book bookLukyanenko = new Book(3);
-    Book bookBudgold = new Book(44);
-    Book bookTolstoy = new Book(5);
-    Book bookGygo = new Book(65);
-    Book bookBibliya = new Book(7);
+        Library myLibrary = new Library();
 
-    ArrayList<Book> listOfMyBooks = new ArrayList<>();
-    Library myLibrary = new Library(listOfMyBooks);
+        myLibrary.add(new Book(7));
+        myLibrary.add(new Book(6));
+        myLibrary.add(new Book(44));
+        myLibrary.add(new Book(5));
+        myLibrary.add(new Book(1));
+        myLibrary.add(new Book(2));
+        myLibrary.add(new Book(3));
 
-        myLibrary.add(bookBibliya);
-        myLibrary.add(bookBradbary);
-        myLibrary.add(bookStrugackie);
-        myLibrary.add(bookBudgold);
-        myLibrary.add(bookGygo);
-        myLibrary.add(bookLukyanenko);
-        myLibrary.add(bookTolstoy);
 
-        Book testBook = new Book(null);
-        myLibrary.find(1);
-          //System.out.println(myLibrary.find(7));
+        myLibrary.find(7);
+       // System.out.println(myLibrary.find(4));
 
     }
 
