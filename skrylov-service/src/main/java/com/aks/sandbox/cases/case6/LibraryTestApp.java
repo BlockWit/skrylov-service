@@ -15,7 +15,25 @@ public class LibraryTestApp {
         myLibrary.add(new Book(1));
         myLibrary.add(new Book(2));
         myLibrary.add(new Book(3));
-
+        myLibrary.add(new Book(4));
+        myLibrary.add(new Book(100));
+        myLibrary.add(new Book(33));
+        myLibrary.add(new Book(22));
+        myLibrary.add(new Book(37));
+        myLibrary.add(new Book(190));
+        myLibrary.add(new Book(70));
+        myLibrary.add(new Book(60));
+        myLibrary.add(new Book(440));
+        myLibrary.add(new Book(50));
+        myLibrary.add(new Book(10));
+        myLibrary.add(new Book(20));
+        myLibrary.add(new Book(30));
+        myLibrary.add(new Book(40));
+        myLibrary.add(new Book(1000));
+        myLibrary.add(new Book(330));
+        myLibrary.add(new Book(220));
+        myLibrary.add(new Book(370));
+        myLibrary.add(new Book(190));
 
         //myLibrary.find(44);
         System.out.println(myLibrary.find(1));

@@ -31,7 +31,6 @@ public class Library {
                 return book1.getNumber().compareTo(book2.getNumber());
             }
         });
-
         System.out.println("Отсортированный по ISBN список книг: ");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).getNumber());
@@ -40,31 +39,32 @@ public class Library {
         double delitel = 0.5;  //геометрическая прогрессия. Любой член геометрической прогресии вычисляется по формуле:
         double b = 0.5;        // Bn = B1 * q^(n-1) - (Бэ энное равно Бэ первое умножить на ку в степени эн минус один)
         double q = 0.5;
-        int delitelAfterRound = (int) Math.round(delitel);
+        //int delitelAfterRound = (int) Math.round(delitel);
 
-        Book book = list.get((int)(list.size() * delitel));
+        Book book = list.get((int) (list.size() * delitel));
 
         if (ISBN == book.getNumber()) {
             System.out.println("Найдена книга с ISBN: " + book.getNumber());
         } else {
             while (ISBN != book.getNumber()) {
-                List<Book> tempList = new ArrayList<>();
+                //List<Book> tempList = new ArrayList<>();
                 if (ISBN > book.getNumber()) {
                     b = b * q;
                     delitel = delitel + b;
-                    book = list.get((int)(list.size() * delitel));
+                    book = list.get((int) (list.size() * delitel));
                     book.getNumber();
+
                     /*for (int k = (int)(list.size() * delitel); k <= list.size(); k++) {
                         tempList.add(k - (int)(list.size() * delitel), tempList.get(k));
                     }*/
-
-                                                                                /*for (int i = list.size() * delitel; i < list.size(); i++) {
-                                                                                    tempList.add(i - list.size() / delitel, list.get(i));
-                                                                                }*/
+                    /*for (int i = list.size() * delitel; i < list.size(); i++) {
+                        tempList.add(i - list.size() / delitel, list.get(i));
+                     }*/
 
                 } else {
-                    delitel = delitel * 2;
-                    book = list.get((int)(list.size() / 2 / delitel));
+                    b = b * q;
+                    delitel = delitel - b;
+                    book = list.get((int) (list.size() * delitel));
                     book.getNumber();
                 }
 
@@ -73,6 +73,8 @@ public class Library {
         }
         return book;
     }
+}
+
 
     /* public Book find(ArrayList<Book> list, int ISBN) {   //Обычный метод поиска книги
 
@@ -88,7 +90,7 @@ public class Library {
         }
         return null;
     } */
-
+/*
     public void copyList() {
         List<Book> sourceList = new ArrayList<>();
         List<Book> targetList = new ArrayList<>();
@@ -108,8 +110,8 @@ public class Library {
         // x - 8 = y
         // size - size / 3   2/3*size   size/3
         //
+*/
 
-    }
-}
+
 
 
