@@ -37,8 +37,12 @@ public class Library {
             System.out.println(list.get(i).getNumber());
         }
 
-        int delitel = 2;
-        Book book = list.get(list.size() / delitel);
+        double delitel = 0.5;  //геометрическая прогрессия. Любой член геометрической прогресии вычисляется по формуле:
+        double b = 0.5;        // Bn = B1 * q^(n-1) - (Бэ энное равно Бэ первое умножить на ку в степени эн минус один)
+        double q = 0.5;
+        int delitelAfterRound = (int) Math.round(delitel);
+
+        Book book = list.get((int)(list.size() * delitel));
 
         if (ISBN == book.getNumber()) {
             System.out.println("Найдена книга с ISBN: " + book.getNumber());
@@ -46,21 +50,21 @@ public class Library {
             while (ISBN != book.getNumber()) {
                 List<Book> tempList = new ArrayList<>();
                 if (ISBN > book.getNumber()) {
-                    for (int j = 0; j < list.size(); j++) {
-
-
-                        for (int i = list.size() / 2; i < list.size(); i++) {
-                            tempList.add(j, list.get(i));
-                        }
-                    }
-
-
-                    book = list.get(list.size() / 2);
+                    b = b * q;
+                    delitel = delitel + b;
+                    book = list.get((int)(list.size() * delitel));
                     book.getNumber();
-                    delitel = delitel * 2;
+                    /*for (int k = (int)(list.size() * delitel); k <= list.size(); k++) {
+                        tempList.add(k - (int)(list.size() * delitel), tempList.get(k));
+                    }*/
+
+                                                                                /*for (int i = list.size() * delitel; i < list.size(); i++) {
+                                                                                    tempList.add(i - list.size() / delitel, list.get(i));
+                                                                                }*/
+
                 } else {
                     delitel = delitel * 2;
-                    book = list.get(list.size() / 2 / delitel);
+                    book = list.get((int)(list.size() / 2 / delitel));
                     book.getNumber();
                 }
 

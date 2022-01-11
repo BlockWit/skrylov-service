@@ -17,6 +17,7 @@ public class s4t1 {
 
         int years = 2022 - birthYear;
         System.out.println( name  +  " вам " + years + " лет ");
+        in.close();
 
     }
 }

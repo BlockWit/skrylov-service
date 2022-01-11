@@ -17,8 +17,8 @@ public class LibraryTestApp {
         myLibrary.add(new Book(3));
 
 
-        myLibrary.find(7);
-       // System.out.println(myLibrary.find(4));
+        //myLibrary.find(44);
+        System.out.println(myLibrary.find(1));
 
     }
 
