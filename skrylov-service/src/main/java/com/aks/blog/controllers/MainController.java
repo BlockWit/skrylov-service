@@ -15,7 +15,7 @@ public class MainController {
         return "sum";
     }
 
-    @PostMapping("/sum")
+    @GetMapping("/sum")
     public String sum(@RequestParam double X, @RequestParam double Y, Model model) {
         model.addAttribute("title", "Человек");
         double result;
